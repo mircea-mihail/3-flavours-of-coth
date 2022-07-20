@@ -1,5 +1,5 @@
 ;nasm -f elf64 -o coth.o coth.asm 	# assemble the program  
-;gcc -m64 -o -no-pie coth coth.o				# link the object file nasm produced into an executable file  
+;gcc -m64 -o coth -no-pie coth.o	# link the object file nasm produced into an executable file  
 ;./coth 							# hello is an executable file 
 
 ;QUAD MEANS DOUBLE SO LONG FLOAT!!!
@@ -19,7 +19,7 @@ section .data
 	basic_read db "%lf", 0
 	var_ask db "coth(x)", 10, "choose an x: ", 0
 	chosen_var db 10, "%lf has been read", 10, 0 
-	checker db 10, "the final approximation is %lf", 10, 0
+	checker db 10, "the coth function approximation is %lf", 10, 0
 
 	one dq 1.0
 	two dq 2.0
